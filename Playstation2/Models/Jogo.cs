@@ -19,7 +19,7 @@ public class Jogo
     public string Descricao { get; set; }
 
     [Required]
-    [Column(TypeName = "decimal(5)")]
+    [Column(TypeName = "decimal(4)")]
     public decimal AnoLancamento { get; set; }
     
     [Required]

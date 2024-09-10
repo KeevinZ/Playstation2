@@ -20,8 +20,8 @@ public class AppDbContext: DbContext
 
         #region Configuração do Muitos para Muitos - JogoTipo
         // Definindo Chave Primária
-        modelBuilder.Entity<JogoTipo>()
-            .HasKey(pt => new { pt.JogoNumero, pt.TipoId });
+        modelBuilder.Entity<JogoGenero>()
+            .HasKey(jg => new { jg.JogoNumero, jg.JogoTipos });
 
         #endregion
 
