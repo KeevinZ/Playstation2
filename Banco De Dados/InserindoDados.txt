@@ -1,4 +1,4 @@
-use jogosps2;
+
 INSERT INTO Generos (NomeGenero) VALUES 
 ('Ação'),
 ('Aventura'),
@@ -28,7 +28,8 @@ INSERT INTO Desenvolvedores (NomeDesenvolvedor) VALUES
 ('Electronic Arts'),
 ('Ubisoft'),
 ('Comunidade'),
-('SEGA');
+('SEGA'),
+('Santa Monica Studios');
 
 
 -- Inserção de jogos
@@ -87,7 +88,7 @@ INSERT INTO JogosDesenvolvedores (JogoID, DesenvolvedorID) VALUES
 (4, 4),            -- Gran Turismo 4: Polyphony Digital
 (5, 5),            -- Shadow of the Colossus: Team Ico
 (6, 6),            -- Resident Evil 4: Capcom
-(7, 6),            -- God of War II: Capcom
+(7, 17),            -- God of War II: Santa Monica Studios
 (8, 8),            -- Ratchet & Clank: Up Your Arsenal: Insomniac Games
 (9, 7),            -- Jak and Daxter: The Precursor Legacy: Naughty Dog
 (10, 3),		   -- Kingdom Hearts II: Square Enix 
