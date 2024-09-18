@@ -1,10 +1,10 @@
 
 -- Criando o banco de dados
-CREATE DATABASE MelhoresJogosPS2;
-USE MelhoresJogosPS2;
+CREATE DATABASE JogosPS2;
+USE JogosPS2;
 
 -- Tabela de jogos
-CREATE TABLE Jogos (
+CREATE TABLE Jogo (
     JogoID INT PRIMARY KEY AUTO_INCREMENT,
     Titulo VARCHAR(255) NOT NULL,
     AnoLancamento INT NOT NULL,
@@ -13,37 +13,37 @@ CREATE TABLE Jogos (
 );
 
 -- Tabela de gêneros
-CREATE TABLE Generos (
+CREATE TABLE Genero (
     GeneroID INT PRIMARY KEY AUTO_INCREMENT,
     NomeGenero VARCHAR(100) NOT NULL
 );
 
 -- Tabela de desenvolvedores (inclui também publicadores)
-CREATE TABLE Desenvolvedores (
+CREATE TABLE Desenvolvedor (
     DesenvolvedorID INT PRIMARY KEY AUTO_INCREMENT,
     NomeDesenvolvedor VARCHAR(255) NOT NULL
 );
 
 -- Tabela de relação entre jogos e gêneros
-CREATE TABLE JogosGeneros (
+CREATE TABLE JogoGenero (
     JogoID INT,
     GeneroID INT,
     PRIMARY KEY (JogoID, GeneroID),
-    FOREIGN KEY (JogoID) REFERENCES Jogos(JogoID),
-    FOREIGN KEY (GeneroID) REFERENCES Generos(GeneroID)
+    FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
+    FOREIGN KEY (GeneroID) REFERENCES Genero(GeneroID)
 );
 
 -- Tabela de relação entre jogos e desenvolvedores/publicadores
-CREATE TABLE JogosDesenvolvedores (
+CREATE TABLE JogoDesenvolvedor (
     JogoID INT,
     DesenvolvedorID INT,
     PRIMARY KEY (JogoID, DesenvolvedorID),
     FOREIGN KEY (JogoID) REFERENCES Jogos(JogoID),
-    FOREIGN KEY (DesenvolvedorID) REFERENCES Desenvolvedores(DesenvolvedorID)
+    FOREIGN KEY (DesenvolvedorID) REFERENCES Desenvolvedor(DesenvolvedorID)
 );
 
 
-INSERT INTO Generos (NomeGenero) VALUES 
+INSERT INTO Genero (NomeGenero) VALUES 
 ('Ação'),
 ('Aventura'),
 ('RPG'),
@@ -56,7 +56,7 @@ INSERT INTO Generos (NomeGenero) VALUES
 ('Simulação');
 
 -- Inserção de desenvolvedores
-INSERT INTO Desenvolvedores (NomeDesenvolvedor) VALUES 
+INSERT INTO Desenvolvedor (NomeDesenvolvedor) VALUES 
 ('Rockstar North'),  -- 1
 ('Konami'),  -- 2
 ('Square Enix'),  -- 3
@@ -102,7 +102,7 @@ INSERT INTO Jogos (Titulo, AnoLancamento, Descricao) VALUES
 ('PES 2013', 2012, 'Um simulador de futebol que oferece uma jogabilidade realista, com controles precisos e mecânicas de jogo detalhadas para uma experiência imersiva.');
 
 -- Relacionamento entre jogos e gêneros atualizado
-INSERT INTO JogosGeneros (JogoID, GeneroID) VALUES 
+INSERT INTO JogoGenero (JogoID, GeneroID) VALUES 
 (1, 1), (1, 2),  -- GTA San Andreas
 (2, 2),          -- Metal Gear Solid 3: Snake Eater
 (3, 3),          -- Final Fantasy X
@@ -126,7 +126,7 @@ INSERT INTO JogosGeneros (JogoID, GeneroID) VALUES
 (21, 7);         -- PES 2013
 
 -- Relacionamento entre jogos e desenvolvedores atualizado
-INSERT INTO JogosDesenvolvedores (JogoID, DesenvolvedorID) VALUES 
+INSERT INTO JogoDesenvolvedor (JogoID, DesenvolvedorID) VALUES 
 (1, 1), (1, 11),   -- GTA San Andreas: Rockstar North e Rockstar Games
 (2, 2),            -- Metal Gear Solid 3: Snake Eater: Konami
 (3, 3),            -- Final Fantasy X: Square Enix

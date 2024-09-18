@@ -1,10 +1,17 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-    
- namespace Playstation2.Models;
 
-[Table("Desenvolvedor")]
-public class Desenvolvedor   
-    
-    [Required(ErrorMessage = "Informe o Nome")]
-    [StringLength(30, ErrorMessage = "O Nome deve possuir no máximo 30 caracteres")]
-    public string Nome { get; set; }
+namespace Playstation2.Models
+{
+    public class Desenvolvedor
+    {
+        [Key]
+        public int DesenvolvedorID { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string NomeDesenvolvedor { get; set; }
+
+        public ICollection<JogoDesenvolvedor> JogoDesenvolvedor { get; set; } = new List<JogoDesenvolvedor>();
+    }
+}

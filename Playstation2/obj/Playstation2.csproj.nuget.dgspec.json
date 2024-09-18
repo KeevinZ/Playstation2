@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj": {}
+    "C:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj": {}
   },
   "projects": {
-    "c:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj": {
+    "C:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj",
+        "projectUniqueName": "C:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj",
         "projectName": "Playstation2",
-        "projectPath": "c:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj",
+        "projectPath": "C:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj",
         "packagesPath": "C:\\Users\\etec\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\obj\\",
+        "outputPath": "C:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\etec\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,6 +21,7 @@
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

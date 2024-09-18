@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Playstaion2.Data;
-using Pokedex.Services;
+using JogosPS2.Data;
+using Playstation2.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 string conexao = builder.Configuration
-.GetConnectionString("PokedexConexao");
+.GetConnectionString("jogosps2Conexao");
 var versao = ServerVersion.AutoDetect(conexao);
 builder.Services.AddDbContext<AppDbContext>(
 opt => opt.UseMySql(conexao, versao));
