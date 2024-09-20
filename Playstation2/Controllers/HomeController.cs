@@ -1,50 +1,70 @@
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Playstation2.Data;
+using Playstation2.ViewModels;
 using Playstation2.Models;
-using System.Linq;
-using System.Threading.Tasks;
+using JogosPS2.Data;
 
-namespace Playstation2.Controllers
+namespace Playstation.Controllers;
+
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly ILogger<HomeController> _logger;
+    private readonly AppDbContext _context;
+
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
-        private readonly AppDbContext _context;
+        _logger = logger;
+        _context = context;
+    }
 
-        public HomeController(AppDbContext context)
+    public IActionResult Index()
+    {
+        // Preenche o ViewModel com dados dos Gêneros e Jogos
+        HomeVM home = new()
         {
-            _context = context;
-        }
+            Generos = _context.Genero.ToList(),
+            Jogos = _context.Jogo
+                .Include(static j => j.Genero)   // Inclui os gêneros relacionados aos jogos
+                .ThenInclude(static jg => jg.Genero)
+                .ToList()
+        };
+        return View(home);
+    }
 
-        // Action para listar os jogos na página inicial
-        public async Task<IActionResult> Index()
+    [HttpGet]
+    public IActionResult Details(int id)
+    {
+        // Busca o jogo pelos relacionamentos e detalhes
+        Jogo jogo = _context.Jogo
+            .Where(j => j.JogoID == id)
+            .Include(j => j.Generos)  // Inclui os gêneros
+            .ThenInclude(jg => jg.Generos)
+            .Include(j => j.Desenvolvedores)  // Inclui os desenvolvedores
+            .ThenInclude(jd => jd.Desenvolvedor)
+            .SingleOrDefault();
+
+        DetailsVM details = new()
         {
-            var jogos = await _context.Jogo
-                .Include(j => j.JogoGeneros)
-                    .ThenInclude(jg => jg.Genero)
-                .Include(j => j.JogoDesenvolvedores)
-                    .ThenInclude(jd => jd.Desenvolvedor)
-                .ToListAsync();
+            Atual = jogo,
+            Anterior = _context.Jogo
+                .OrderByDescending(j => j.JogoID)
+                .FirstOrDefault(j => j.JogoID < id),
+            Proximo = _context.Jogo
+                .OrderBy(j => j.JogoID)
+                .FirstOrDefault(j => j.JogoID > id)
+        };
+        return View(details);
+    }
 
-            return View(jogos);
-        }
+    public IActionResult Privacy()
+    {
+        return View();
+    }
 
-        // Action para exibir detalhes de um jogo
-        public async Task<IActionResult> Details(int id)
-        {
-            var jogo = await _context.Jogo
-                .Include(j => j.JogoGeneros)
-                    .ThenInclude(jg => jg.Genero)
-                .Include(j => j.JogoDesenvolvedores)
-                    .ThenInclude(jd => jd.Desenvolvedor)
-                .FirstOrDefaultAsync(j => j.JogoID == id);
-
-            if (jogo == null)
-            {
-                return NotFound();
-            }
-
-            return View(jogo);
-        }
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }

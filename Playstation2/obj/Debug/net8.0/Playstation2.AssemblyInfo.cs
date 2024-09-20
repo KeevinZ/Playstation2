@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Playstation2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b77ad14b33b977416c4dfe7c727b119be9f1eaf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b90b0fc1f2457fd05c2691d1026b59b9a6f6cd82")]
 [assembly: System.Reflection.AssemblyProductAttribute("Playstation2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Playstation2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
