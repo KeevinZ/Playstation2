@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Playstation2.Models
 {
     public class Jogo
     {
-        internal object Genero;
+        internal object? Genero;
 
         [Key]
         public int JogoID { get; set; }
@@ -13,12 +14,12 @@ namespace Playstation2.Models
         [Required]
         public int GeneroId { get; set; }
         [ForeignKey("GeneroId")]
-        public required Genero Genero { get; set; }
+        public required Genero Generos { get; set; }
 
         [Required]
         public int DesenvolvedorId { get; set; }
         [ForeignKey("DesenvolvedorId")]
-        public Desenvolvedor Desenvolvedor { get; set; }
+        public required Desenvolvedor Desenvolvedor { get; set; }
 
         [Required]
         [StringLength(255)]
@@ -31,11 +32,11 @@ namespace Playstation2.Models
 
         [Required]
         [StringLength(1000)]
-        public string Descricao { get; set; }
+        public required string Descricao { get; set; }
 
         public ICollection<JogoGenero> JogoGenero { get; set; } = new List<JogoGenero>();
         public ICollection<JogoDesenvolvedor> JogoDesenvolvedor { get; set; } = new List<JogoDesenvolvedor>();
-        public object Generos { get; internal set; }
+
     }
 }
 

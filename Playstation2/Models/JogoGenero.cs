@@ -11,6 +11,6 @@ namespace Playstation2.Models
 
         [Key, Column(Order = 2)]
         public int GeneroID { get; set; }
-        public Genero Genero { get; set; }
+        public required Genero Genero { get; set; }
     }
 }
