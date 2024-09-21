@@ -20,38 +20,11 @@ namespace JogosPS2.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-
             modelBuilder.Entity<JogoGenero>()
                 .HasKey(jg => new { jg.JogoID, jg.GeneroID });
-
-
-            modelBuilder.Entity<JogoGenero>()
-                .HasOne(jg => jg.Jogo)
-                .WithMany(j => j.JogoGenero)
-                .HasForeignKey(jg => jg.JogoID);
-
- 
-            modelBuilder.Entity<JogoGenero>()
-                .HasOne(jg => jg.Genero)
-                .WithMany(g => g.JogoGenero)
-                .HasForeignKey(jg => jg.GeneroID);
-
-     
-            modelBuilder.Entity<JogoDesenvolvedor>()
+               modelBuilder.Entity<JogoDesenvolvedor>()
                 .HasKey(jd => new { jd.JogoID, jd.DesenvolvedorID });
 
-            
-            modelBuilder.Entity<JogoDesenvolvedor>()
-                .HasOne(jd => jd.Jogo)
-                .WithMany(j => j.JogoDesenvolvedor)
-                .HasForeignKey(jd => jd.JogoID);
-
-            
-            modelBuilder.Entity<JogoDesenvolvedor>()
-                .HasOne(jd => jd.Desenvolvedor)
-                .WithMany(d => d.JogoDesenvolvedor)
-                .HasForeignKey(jd => jd.DesenvolvedorID);
         }
     }
 }

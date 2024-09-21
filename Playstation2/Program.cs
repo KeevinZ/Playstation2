@@ -1,13 +1,13 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using JogosPS2.Data;
-using Playstation2.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+#pragma warning disable CS8600 
 string conexao = builder.Configuration
 .GetConnectionString("jogosps2Conexao");
+#pragma warning restore CS8600 
 var versao = ServerVersion.AutoDetect(conexao);
 builder.Services.AddDbContext<AppDbContext>(
 opt => opt.UseMySql(conexao, versao));

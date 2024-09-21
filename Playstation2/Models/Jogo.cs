@@ -6,20 +6,8 @@ namespace Playstation2.Models
 {
     public class Jogo
     {
-        internal object? Genero;
-
         [Key]
         public int JogoID { get; set; }
-
-        [Required]
-        public int GeneroId { get; set; }
-        [ForeignKey("GeneroId")]
-        public required Genero Generos { get; set; }
-
-        [Required]
-        public int DesenvolvedorId { get; set; }
-        [ForeignKey("DesenvolvedorId")]
-        public required Desenvolvedor Desenvolvedor { get; set; }
 
         [Required]
         [StringLength(255)]
@@ -32,16 +20,13 @@ namespace Playstation2.Models
 
         [Required]
         [StringLength(1000)]
-        public required string Descricao { get; set; }
+        public string Descricao { get; set; }
 
-        public ICollection<JogoGenero> JogoGenero { get; set; } = new List<JogoGenero>();
-        public ICollection<JogoDesenvolvedor> JogoDesenvolvedor { get; set; } = new List<JogoDesenvolvedor>();
+        [StringLength(200)]
+         public string Imagem { get; set; }
+
+        public ICollection<JogoGenero> JogoGeneros { get; set; } 
+        public ICollection<JogoDesenvolvedor> JogoDesenvolvedores { get; set; } 
 
     }
 }
-
-// [StringLength(200)]
-// public string Imagem { get; set; }
-
-// [StringLength(400)]
-// public string Animacao { get; set; }

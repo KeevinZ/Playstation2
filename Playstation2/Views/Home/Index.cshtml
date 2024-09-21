@@ -1,4 +1,4 @@
-﻿@model Playstation.ViewModels.HomeVM
+﻿@model Playstation2.ViewModels.HomeVM
 @{
     ViewData["Title"] = "Home";
 }
@@ -16,11 +16,11 @@
                     Todos
                 </button>
                 
-                @foreach (Genero Genero in Model.Genero)
+                @foreach (Genero genero in Model.Generos)
                 {
-                    <button id="btn-@Genero.Nome" class="btn btn-sm my-2 text-white btn-filter"
+                    <button id="btn-@genero.NomeGenero" class="btn btn-sm my-2 text-white btn-filter"
                         style="background-color:(black)">
-                        @Genero.Nome
+                        @genero.NomeGenero
                     </button>
                 }
 
@@ -30,21 +30,21 @@
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
 
-        @foreach (Jogo Jogo in Model.Jogo)
+        @foreach (Jogo jogo in Model.Jogos)
 {
-    <div class="col @string.Join(' ', Jogo.Genero.Select(g => g.Genero.Nome))">
-        <a asp-action="Details" asp-route-id="@Jogo.Numero" class="text-decoration-none">
+    <div class="col">
+        <a asp-action="Details" asp-route-id="@jogo.JogoID" class="text-decoration-none">
             <div class="card" style="background-color: blue;">
-                <img src="@Jogo.Imagem" class="card-img-top" alt="@Jogo.Nome" />
+                <img src="@jogo.Imagem" class="card-img-top" alt="@jogo.Titulo" />
                 <div class="card-body">
-                    <h5 class="card-text mb-1 text-white">Nº @Jogo.Numero.ToString("00")</h5>
-                    <h3 class="card-title text-dark">@Jogo.Nome</h3>
+                    <h5 class="card-text mb-1 text-white">Nº @jogo.JogoID</h5>
+                    <h3 class="card-title text-dark">@jogo.Titulo</h3>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex gap-2 my-2">
-                            @foreach (JogoGenero genero in Jogo.Genero)
+                            @* @foreach (JogoGenero genero in jogo.JogoGeneros)
                             {
-                                <a href="#" class="btn text-white" style="background-color: white;">@genero.Genero.Nome</a>
-                            }
+                                <a href="#" class="btn text-white" style="background-color: white;">@genero.Genero.NomeGenero</a>
+                            } *@
                         </div>
                     </div>
                 </div>

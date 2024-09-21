@@ -12,6 +12,6 @@ namespace Playstation2.Models
         [StringLength(100)]
         public string NomeGenero { get; set; }
 
-        public ICollection<JogoGenero> JogoGenero { get; set; } = new List<JogoGenero>();
+        public ICollection<JogoGenero> JogoGeneros { get; set; } = new List<JogoGenero>();
     }
 }

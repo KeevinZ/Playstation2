@@ -12,6 +12,6 @@ namespace Playstation2.Models
         [StringLength(100)]
         public string NomeDesenvolvedor { get; set; }
 
-        public ICollection<JogoDesenvolvedor> JogoDesenvolvedor { get; set; } = new List<JogoDesenvolvedor>();
+        public ICollection<JogoDesenvolvedor> JogoDesenvolvedores { get; set; }
     }
 }

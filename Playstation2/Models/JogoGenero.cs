@@ -7,10 +7,12 @@ namespace Playstation2.Models
     {
         [Key, Column(Order = 1)]
         public int JogoID { get; set; }
+        [ForeignKey("JogoID")]
         public Jogo Jogo { get; set; }
 
         [Key, Column(Order = 2)]
         public int GeneroID { get; set; }
-        public required Genero Genero { get; set; }
+        [ForeignKey("GeneroID")]
+        public Genero Genero { get; set; }
     }
 }

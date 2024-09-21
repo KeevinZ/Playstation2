@@ -5,7 +5,7 @@ using Playstation2.ViewModels;
 using Playstation2.Models;
 using JogosPS2.Data;
 
-namespace Playstation.Controllers;
+namespace Playstation2.Controllers;
 
 public class HomeController : Controller
 {
@@ -25,37 +25,36 @@ public class HomeController : Controller
         {
             Generos = _context.Genero.ToList(),
             Jogos = _context.Jogo
-                .Include(static j => j.Genero)   // Inclui os gêneros relacionados aos jogos
-                .ThenInclude(static jg => jg.Genero)
+                .Include(j => j.JogoGeneros)   // Inclui os gêneros relacionados aos jogos
+                .ThenInclude(jg => jg.Genero)
                 .ToList()
         };
         return View(home);
     }
 
-    [HttpGet]
-    public IActionResult Details(int id)
-    {
-        // Busca o jogo pelos relacionamentos e detalhes
-        Jogo jogo = _context.Jogo
-            .Where(j => j.JogoID == id)
-            .Include(j => j.Generos)  // Inclui os gêneros
-            .ThenInclude(jg => jg.Generos)
-            .Include(j => j.Desenvolvedores)  // Inclui os desenvolvedores
-            .ThenInclude(jd => jd.Desenvolvedor)
-            .SingleOrDefault();
+    // [HttpGet]
+    // public IActionResult Details(int id)
+    // {
+    //     // Busca o jogo pelos relacionamentos e detalhes
+    //     Jogo jogo = _context.Jogo
+    //         .Where(j => j.JogoID == id)
+    //         .Include(j => j.Genero)  // Inclui os gêneros
+    //         .Include(j => j.Desenvolvedores)  // Inclui os desenvolvedores
+    //         .ThenInclude(jd => jd.Desenvolvedor)
+    //         .SingleOrDefault();
 
-        DetailsVM details = new()
-        {
-            Atual = jogo,
-            Anterior = _context.Jogo
-                .OrderByDescending(j => j.JogoID)
-                .FirstOrDefault(j => j.JogoID < id),
-            Proximo = _context.Jogo
-                .OrderBy(j => j.JogoID)
-                .FirstOrDefault(j => j.JogoID > id)
-        };
-        return View(details);
-    }
+    //     DetailsVM details = new()
+    //     {
+    //         Atual = jogo,
+    //         Anterior = _context.Jogo
+    //             .OrderByDescending(j => j.JogoID)
+    //             .FirstOrDefault(j => j.JogoID < id),
+    //         Proximo = _context.Jogo
+    //             .OrderBy(j => j.JogoID)
+    //             .FirstOrDefault(j => j.JogoID > id)
+    //     };
+    //     return View(details);
+    // }
 
     public IActionResult Privacy()
     {

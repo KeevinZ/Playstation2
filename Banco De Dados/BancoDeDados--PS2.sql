@@ -9,7 +9,8 @@ CREATE TABLE Jogo (
     Titulo VARCHAR(255) NOT NULL,
     AnoLancamento INT NOT NULL,
     Plataforma VARCHAR(50) NOT NULL DEFAULT 'PlayStation 2',
-    Descricao Varchar(1000) NOT NULL
+    Descricao Varchar(1000) NOT NULL,
+    Imagem varchar(200)
 );
 
 -- Tabela de gêneros
