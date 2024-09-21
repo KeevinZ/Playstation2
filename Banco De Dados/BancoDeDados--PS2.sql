@@ -38,7 +38,7 @@ CREATE TABLE JogoDesenvolvedor (
     JogoID INT,
     DesenvolvedorID INT,
     PRIMARY KEY (JogoID, DesenvolvedorID),
-    FOREIGN KEY (JogoID) REFERENCES Jogos(JogoID),
+    FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
     FOREIGN KEY (DesenvolvedorID) REFERENCES Desenvolvedor(DesenvolvedorID)
 );
 
@@ -78,7 +78,7 @@ INSERT INTO Desenvolvedor (NomeDesenvolvedor) VALUES
 
 
 -- Inserção de jogos atualizada
-INSERT INTO Jogos (Titulo, AnoLancamento, Descricao) VALUES 
+INSERT INTO Jogo (Titulo, AnoLancamento, Descricao) VALUES 
 ('Grand Theft Auto: San Andreas', 2004, 'Um jogo de ação e aventura de mundo aberto que permite ao jogador explorar uma vasta cidade fictícia, realizando missões e interagindo com personagens em um ambiente dinâmico.'),
 ('Metal Gear Solid 3: Snake Eater', 2004, 'Um jogo de espionagem tática onde o jogador assume o papel de Snake, um espião infiltrado em uma selva soviética para parar uma ameaça nuclear.'),
 ('Final Fantasy X', 2001, 'Um RPG que segue a jornada de Tidus e Yuna em um mundo devastado por uma criatura chamada Sin, com uma história envolvente e um sistema de batalha baseado em turnos.'),
@@ -148,3 +148,4 @@ INSERT INTO JogoDesenvolvedor (JogoID, DesenvolvedorID) VALUES
 (19, 9),           -- SoulCalibur II: Namco
 (20, 8),           -- Mortal Kombat: Shaolin Monks
 (21, 10);          -- PES 2013: EA Sports
+
