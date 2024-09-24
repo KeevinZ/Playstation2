@@ -4,13 +4,8 @@ using Playstation2.Models;
 
 namespace JogosPS2.Data
 {
-    public class AppDbContext : IdentityDbContext
+    public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbContext(options)
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-        }
-
-        
         public DbSet<Jogo> Jogo { get; set; }
         public DbSet<Genero> Genero { get; set; }
         public DbSet<Desenvolvedor> Desenvolvedor { get; set; }

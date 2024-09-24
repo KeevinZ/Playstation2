@@ -25,7 +25,7 @@ public class HomeController : Controller
         {
             Generos = _context.Genero.ToList(),
             Jogos = _context.Jogo
-                .Include(j => j.JogoGeneros)   // Inclui os gêneros relacionados aos jogos
+                .Include(j => j.JogoGeneros)  
                 .ThenInclude(jg => jg.Genero)
                 .ToList()
         };
