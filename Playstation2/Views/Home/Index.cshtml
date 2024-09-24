@@ -3,10 +3,6 @@
     ViewData["Title"] = "Home";
 }
 
-<div style="background-color: rgb(70, 3, 226);">
-</div>
-
-
 <div class="pt-5 container">
     <div class="row">
         <div class="col mx-auto text-center">
@@ -16,11 +12,11 @@
                     Todos
                 </button>
                 
-                @foreach (Genero genero in Model.Generos)
+                @foreach (Genero tipo in Model.Generos')
                 {
-                    <button id="btn-@genero.NomeGenero" class="btn btn-sm my-2 text-white btn-filter"
-                        style="background-color:(black)">
-                        @genero.NomeGenero
+                    <button id="btn-@tipo.Nome" class="btn btn-sm my-2 text-white btn-filter"
+                        style="background-color:@tipo.Cor">
+                        @tipo.Nome
                     </button>
                 }
 
@@ -31,31 +27,32 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
 
         @foreach (Jogo jogo in Model.Jogos)
-{
-    <div class="col">
-        <a asp-action="Details" asp-route-id="@jogo.JogoID" class="text-decoration-none">
-            <div class="card" style="background-color: blue;">
-                <img src="@jogo.Imagem" class="card-img-top" alt="@jogo.Titulo" />
-                <div class="card-body">
-                    <h5 class="card-text mb-1 text-white">Nº @jogo.JogoID</h5>
-                    <h3 class="card-title text-dark">@jogo.Titulo</h3>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="d-flex gap-2 my-2">
-                            @* @foreach (JogoGenero genero in jogo.JogoGeneros)
-                            {
-                                <a href="#" class="btn text-white" style="background-color: white;">@genero.Genero.NomeGenero</a>
-                            } *@
+        {
+            <!-- Card Jogo - Inicio -->
+            <div class="col @string.Join(' ', jogo.Tipos.Select(t => t.Tipo.Nome))">
+                <a asp-action="Details" asp-route-id="@pokemon.Numero" class="text-decoration-none">
+                    <div class="card" style="background-color: @BackgroundColor(pokemon.Tipos.ToArray()[0].Tipo.Cor)">
+                        <img src="@pokemon.Imagem" class="card-img-top" alt="@pokemon.Nome" />
+                        <div class="card-body">
+                            <h5 class="card-text mb-1 text-white">Nº @pokemon.Numero.ToString("000")</h5>
+                            <h3 class="card-title text-dark">@pokemon.Nome</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-2 my-2">
+                                    @foreach (JogoGenero genero in JogoGenero)
+                                    {
+                                        <a href="#" class="btn text-white"
+                                         style="background-color:@tipo.Tipo.Cor">@tipo.Tipo.Nome</a>
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-        </a>
-    </div>
-}
+            <!-- Card Pokemon - Fim -->
+        }
 
-
-
-        <div id="zeroJogo" class="col-lg-12 text-center" hidden>
+        <div id="zeroPokemon" class="col-lg-12 text-center" hidden>
             <h1 class="my-3 text-danger">Nenhum Jogo Encontrado</h1>
         </div>
     </div>

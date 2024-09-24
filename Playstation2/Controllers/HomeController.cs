@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Playstation2.ViewModels;
 using Playstation2.Models;
 using JogosPS2.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Playstation2.Controllers;
 

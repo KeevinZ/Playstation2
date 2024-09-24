@@ -79,28 +79,28 @@ INSERT INTO Desenvolvedor (NomeDesenvolvedor) VALUES
 
 
 -- Inserção de jogos atualizada
-INSERT INTO Jogo (Titulo, AnoLancamento, Descricao) VALUES 
-('Grand Theft Auto: San Andreas', 2004, 'Um jogo de ação e aventura de mundo aberto que permite ao jogador explorar uma vasta cidade fictícia, realizando missões e interagindo com personagens em um ambiente dinâmico.'),
-('Metal Gear Solid 3: Snake Eater', 2004, 'Um jogo de espionagem tática onde o jogador assume o papel de Snake, um espião infiltrado em uma selva soviética para parar uma ameaça nuclear.'),
-('Final Fantasy X', 2001, 'Um RPG que segue a jornada de Tidus e Yuna em um mundo devastado por uma criatura chamada Sin, com uma história envolvente e um sistema de batalha baseado em turnos.'),
-('Gran Turismo 4', 2004, 'Um simulador de corrida que oferece uma vasta gama de veículos e pistas, com gráficos realistas e uma física de direção precisa.'),
-('Shadow of the Colossus', 2005, 'Um jogo de ação e aventura em que o jogador deve derrotar gigantes chamados Colossos em um vasto mundo vazio para ressuscitar uma jovem.'),
-('Resident Evil 4', 2005, 'Um jogo de terror de sobrevivência e ação, onde o jogador controla Leon S. Kennedy, um agente do governo que deve resgatar a filha do presidente de um culto perigoso.'),
-('God of War II', 2007, 'Um jogo de ação e aventura que segue a história de Kratos em sua busca por vingança contra os deuses do Olimpo, com jogabilidade baseada em combates e quebra-cabeças.'),
-('Crash of Titans', 2007, 'Um jogo de ação e plataforma em que Crash Bandicoot enfrenta inimigos gigantes e monta em titãs, com muita ação e um estilo de combate único.'),
-('Jak and Daxter: The Precursor Legacy', 2001, 'Um jogo de plataforma de ação e aventura em um mundo aberto, onde Jak e seu amigo Daxter exploram um mundo cheio de mistérios e desafios.'),
-('Kingdom Hearts II', 2005, 'Um RPG de ação que mistura personagens da Disney e da Square Enix em uma aventura épica para proteger mundos da escuridão.'),
-('Super Coleção 7.784 Jogos', 2007, 'Super Coleção 7.784 Jogos é um jogo para Playstation 2 que vem 5 emuladores de video games antigos, como Atari 2600, Nintendo Entertainment System, Super Nintendo, Master System e Mega Drive.'),
-('Tekken 5', 2005, 'Um jogo de luta em 3D com uma variedade de personagens e estilos de luta, oferecendo tanto modos de história quanto de combate versus.'),
-('Burnout 3: Takedown', 2004, 'Um jogo de corrida arcade onde o objetivo é destruir os carros dos oponentes e causar o maior dano possível em acidentes espetaculares.'),
-('Okami', 2006, 'Um jogo de ação e aventura inspirado na mitologia japonesa, onde o jogador controla uma deusa lobo chamada Amaterasu em uma missão para salvar o mundo das trevas.'),
-('Devil May Cry 3: Dante\'s Awakening', 2005, 'Um jogo de ação hack and slash onde o jogador controla Dante, um caçador de demônios, enfrentando hordas de inimigos e desafiando seu próprio irmão.'),
-('Prince of Persia: The Sands of Time', 2003, 'Um jogo de ação e plataforma onde o jogador controla o Príncipe, que deve usar habilidades de parkour e manipulação do tempo para salvar seu reino.'),
-('Silent Hill 2', 2001, 'Um jogo de terror psicológico em que o jogador assume o papel de James Sunderland, que procura sua esposa falecida em uma cidade estranha e aterrorizante.'),
-('SSX Tricky', 2001, 'Um jogo de corrida de snowboard que oferece truques exagerados e acrobacias em pistas radicais, com uma jogabilidade arcade acelerada.'),
-('SoulCalibur II', 2003, 'Um jogo de luta em 3D centrado em combates com armas, oferecendo uma variedade de personagens com estilos únicos e uma narrativa envolvente.'),
-('Mortal Kombat: Shaolin Monks', 2005, 'Um jogo de ação e aventura em que os jogadores assumem o controle de Liu Kang e Kung Lao enquanto enfrentam hordas de inimigos no universo Mortal Kombat.'),
-('PES 2013', 2012, 'Um simulador de futebol que oferece uma jogabilidade realista, com controles precisos e mecânicas de jogo detalhadas para uma experiência imersiva.');
+INSERT INTO Jogo (Titulo, AnoLancamento, Descricao, Imagem) VALUES 
+('Grand Theft Auto: San Andreas', 2004, 'Um jogo de ação e aventura de mundo aberto que permite ao jogador explorar uma vasta cidade fictícia, realizando missões e interagindo com personagens em um ambiente dinâmico.', '\img\Jogos\1.png'),
+('Metal Gear Solid 3: Snake Eater', 2004, 'Um jogo de espionagem tática onde o jogador assume o papel de Snake, um espião infiltrado em uma selva soviética para parar uma ameaça nuclear.', '\img\Jogos\2.png'),
+('Final Fantasy X', 2001, 'Um RPG que segue a jornada de Tidus e Yuna em um mundo devastado por uma criatura chamada Sin, com uma história envolvente e um sistema de batalha baseado em turnos.', '\img\Jogos\3.png'),
+('Gran Turismo 4', 2004, 'Um simulador de corrida que oferece uma vasta gama de veículos e pistas, com gráficos realistas e uma física de direção precisa.', '\img\Jogos\4.png'),
+('Shadow of the Colossus', 2005, 'Um jogo de ação e aventura em que o jogador deve derrotar gigantes chamados Colossos em um vasto mundo vazio para ressuscitar uma jovem.', '\img\Jogos\5.png'),
+('Resident Evil 4', 2005, 'Um jogo de terror de sobrevivência e ação, onde o jogador controla Leon S. Kennedy, um agente do governo que deve resgatar a filha do presidente de um culto perigoso.', '\img\Jogos\6.png'),
+('God of War II', 2007, 'Um jogo de ação e aventura que segue a história de Kratos em sua busca por vingança contra os deuses do Olimpo, com jogabilidade baseada em combates e quebra-cabeças.', '\img\Jogos\7.png'),
+('Crash of Titans', 2007, 'Um jogo de ação e plataforma em que Crash Bandicoot enfrenta inimigos gigantes e monta em titãs, com muita ação e um estilo de combate único.', '\img\Jogos\8.png'),
+('Jak and Daxter: The Precursor Legacy', 2001, 'Um jogo de plataforma de ação e aventura em um mundo aberto, onde Jak e seu amigo Daxter exploram um mundo cheio de mistérios e desafios.', '\img\Jogos\9.png'),
+('Kingdom Hearts II', 2005, 'Um RPG de ação que mistura personagens da Disney e da Square Enix em uma aventura épica para proteger mundos da escuridão.', '\img\Jogos\10.png'),
+('Super Coleção 7.784 Jogos', 2007, 'Super Coleção 7.784 Jogos é um jogo para Playstation 2 que vem 5 emuladores de video games antigos, como Atari 2600, Nintendo Entertainment System, Super Nintendo, Master System e Mega Drive.', '\img\Jogos\11.png'),
+('Tekken 5', 2005, 'Um jogo de luta em 3D com uma variedade de personagens e estilos de luta, oferecendo tanto modos de história quanto de combate versus.', '\img\Jogos\12.png'),
+('Burnout 3: Takedown', 2004, 'Um jogo de corrida arcade onde o objetivo é destruir os carros dos oponentes e causar o maior dano possível em acidentes espetaculares.', '\img\Jogos\13.png'),
+('Okami', 2006, 'Um jogo de ação e aventura inspirado na mitologia japonesa, onde o jogador controla uma deusa lobo chamada Amaterasu em uma missão para salvar o mundo das trevas.', '\img\Jogos\14.png'),
+('Devil May Cry 3: Dante\'s Awakening', 2005, 'Um jogo de ação hack and slash onde o jogador controla Dante, um caçador de demônios, enfrentando hordas de inimigos e desafiando seu próprio irmão.', '\img\Jogos\15.png'),
+('Prince of Persia: The Sands of Time', 2003, 'Um jogo de ação e plataforma onde o jogador controla o Príncipe, que deve usar habilidades de parkour e manipulação do tempo para salvar seu reino.', '\img\Jogos\16.png'),
+('Silent Hill 2', 2001, 'Um jogo de terror psicológico em que o jogador assume o papel de James Sunderland, que procura sua esposa falecida em uma cidade estranha e aterrorizante.', '\img\Jogos\17.png'),
+('SSX Tricky', 2001, 'Um jogo de corrida de snowboard que oferece truques exagerados e acrobacias em pistas radicais, com uma jogabilidade arcade acelerada.', '\img\Jogos\18.png'),
+('SoulCalibur II', 2003, 'Um jogo de luta em 3D centrado em combates com armas, oferecendo uma variedade de personagens com estilos únicos e uma narrativa envolvente.', '\img\Jogos\19.png'),
+('Mortal Kombat: Shaolin Monks', 2005, 'Um jogo de ação e aventura em que os jogadores assumem o controle de Liu Kang e Kung Lao enquanto enfrentam hordas de inimigos no universo Mortal Kombat.', '\img\Jogos\20.png'),
+('PES 2013', 2012, 'Um simulador de futebol que oferece uma jogabilidade realista, com controles precisos e mecânicas de jogo detalhadas para uma experiência imersiva.', '\img\Jogos\21.png');
 
 -- Relacionamento entre jogos e gêneros atualizado
 INSERT INTO JogoGenero (JogoID, GeneroID) VALUES 

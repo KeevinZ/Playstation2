@@ -4,7 +4,7 @@ using JogosPS2.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-string conexao = builder.Configuration.GetConnectionString("Conexao");
+string conexao = builder.Configuration.GetConnectionString("JogosPS2Conexao");
 var versao = ServerVersion.AutoDetect(conexao);
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseMySql(conexao, versao)
