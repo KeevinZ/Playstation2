@@ -17,6 +17,7 @@ CREATE TABLE Jogo (
 CREATE TABLE Genero (
     GeneroID INT PRIMARY KEY AUTO_INCREMENT,
     NomeGenero VARCHAR(100) NOT NULL
+    Cor varchar(25)
 );
 
 -- Tabela de desenvolvedores (inclui também publicadores)
@@ -44,17 +45,17 @@ CREATE TABLE JogoDesenvolvedor (
 );
 
 
-INSERT INTO Genero (NomeGenero) VALUES 
-('Ação'),
-('Aventura'),
-('RPG'),
-('Tiro'),
-('Plataforma'),
-('Corrida'),
-('Esportes'),
-('Luta'),
-('Vários'),
-('Simulação');
+INSERT INTO Genero (NomeGenero, Cor) VALUES 
+('Ação''rgba(170, 170, 187, 1)'),
+('Aventura''rgba(51, 153, 255, 1)'),
+('RPG''rgba(255, 204, 51, 1)'),
+('Tiro''rgba(119, 102, 238, 1)'),
+('Plataforma''rgba(102, 102, 187, 1)'),
+('Corrida''rgba(136, 153, 255, 1)'),
+('Esportes''rgba(170, 85, 153, 1)'),
+('Luta''rgba(119, 85, 68, 1)'),
+('Vários''rgba(170, 187, 34, 1)''),
+('Simulação''rgba(221, 187, 85, 1)');
 
 -- Inserção de desenvolvedores
 INSERT INTO Desenvolvedor (NomeDesenvolvedor) VALUES 

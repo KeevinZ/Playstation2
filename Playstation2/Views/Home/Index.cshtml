@@ -1,6 +1,10 @@
-﻿@model Playstation2.ViewModels.HomeVM
+﻿﻿@model Pokedex.ViewModels.HomeVM
 @{
     ViewData["Title"] = "Home";
+    string BackgroundColor(string cor)
+    {
+        return cor.Replace("1)", "0.75)");
+    }
 }
 
 <div class="pt-5 container">
@@ -12,11 +16,11 @@
                     Todos
                 </button>
                 
-                @foreach (Genero tipo in Model.Generos')
+                @foreach (Genero genero in Model.Genero)
                 {
-                    <button id="btn-@tipo.Nome" class="btn btn-sm my-2 text-white btn-filter"
-                        style="background-color:@tipo.Cor">
-                        @tipo.Nome
+                    <button id="btn-@genero.NomeGenero" class="btn btn-sm my-2 text-white btn-filter"
+                        style="background-color:@genero.Cor">
+                        @genero.NomeGenero
                     </button>
                 }
 
@@ -26,10 +30,10 @@
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
 
-        @foreach (Jogo jogo in Model.Jogos)
+        @foreach (Pokemon pokemon in Model.Pokemons)
         {
-            <!-- Card Jogo - Inicio -->
-            <div class="col @string.Join(' ', jogo.Tipos.Select(t => t.Tipo.Nome))">
+            <!-- Card Pokemon - Inicio -->
+            <div class="col @string.Join(' ', pokemon.Tipos.Select(t => t.Tipo.Nome))">
                 <a asp-action="Details" asp-route-id="@pokemon.Numero" class="text-decoration-none">
                     <div class="card" style="background-color: @BackgroundColor(pokemon.Tipos.ToArray()[0].Tipo.Cor)">
                         <img src="@pokemon.Imagem" class="card-img-top" alt="@pokemon.Nome" />
@@ -38,10 +42,10 @@
                             <h3 class="card-title text-dark">@pokemon.Nome</h3>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex gap-2 my-2">
-                                    @foreach (JogoGenero genero in JogoGenero)
+                                    @foreach (JogoGenero genero in Genero.Cor)
                                     {
                                         <a href="#" class="btn text-white"
-                                         style="background-color:@tipo.Tipo.Cor">@tipo.Tipo.Nome</a>
+                                         style="background-color:@genero.Genero.Cor">@Genero.genero.Nome</a>
                                     }
                                 </div>
                             </div>
@@ -53,7 +57,7 @@
         }
 
         <div id="zeroPokemon" class="col-lg-12 text-center" hidden>
-            <h1 class="my-3 text-danger">Nenhum Jogo Encontrado</h1>
+            <h1 class="my-3 text-danger">Nenhum Pokemon Encontrado</h1>
         </div>
     </div>
 
