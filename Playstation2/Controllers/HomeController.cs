@@ -32,29 +32,31 @@ public class HomeController : Controller
         return View(home);
     }
 
-    // [HttpGet]
-    // public IActionResult Details(int id)
-    // {
-    //     // Busca o jogo pelos relacionamentos e detalhes
-    //     Jogo jogo = _context.Jogo
-    //         .Where(j => j.JogoID == id)
-    //         .Include(j => j.Genero)  // Inclui os gêneros
-    //         .Include(j => j.Desenvolvedores)  // Inclui os desenvolvedores
-    //         .ThenInclude(jd => jd.Desenvolvedor)
-    //         .SingleOrDefault();
+    [HttpGet]
+    public IActionResult Details(int id)
+    {
+        // Busca o jogo pelos relacionamentos e detalhes
+       Jogo jogo = _context.Jogo
+    .Where(j => j.JogoID == id)
+    .Include(j => j.JogoGeneros)                // Inclui a relação JogoGenero
+        .ThenInclude(jg => jg.Genero)           // Inclui os gêneros via JogoGenero
+    .Include(j => j.JogoDesenvolvedores)        // Inclui a relação JogoDesenvolvedor
+        .ThenInclude(jd => jd.Desenvolvedor)    // Inclui os desenvolvedores via JogoDesenvolvedor
+    .SingleOrDefault();
 
-    //     DetailsVM details = new()
-    //     {
-    //         Atual = jogo,
-    //         Anterior = _context.Jogo
-    //             .OrderByDescending(j => j.JogoID)
-    //             .FirstOrDefault(j => j.JogoID < id),
-    //         Proximo = _context.Jogo
-    //             .OrderBy(j => j.JogoID)
-    //             .FirstOrDefault(j => j.JogoID > id)
-    //     };
-    //     return View(details);
-    // }
+
+        DetailsVM details = new()
+        {
+            Atual = jogo,
+            Anterior = _context.Jogo
+                .OrderByDescending(j => j.JogoID)
+                .FirstOrDefault(j => j.JogoID < id),
+            Proximo = _context.Jogo
+                .OrderBy(j => j.JogoID)
+                .FirstOrDefault(j => j.JogoID > id)
+        };
+        return View(details);
+    }
 
     public IActionResult Privacy()
     {

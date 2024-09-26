@@ -1,4 +1,4 @@
-@* @model Playstation2.ViewModels.DetailsVM
+@model Playstation2.ViewModels.DetailsVM
 @{
     ViewData["Title"] = "Detalhes do Jogo";
 }
@@ -30,17 +30,30 @@
             <img class="img-fluid cursor-pointer" src="@Model.Atual.Imagem" alt="@Model.Atual.Titulo">
         </div>
         <div class="col-lg-7 fs-5 mt-4">
-            <p class="mb-3"><strong>Descrição:</strong> @Model.Atual.Descricao</p>
-            <p class="mb-3"><strong>Gênero:</strong> @Model.Atual.Genero.NomeGenero</p>
-            <p class="mb-3"><strong>Desenvolvedor:</strong> @Model.Atual.Desenvolvedor.NomeDesenvolvedor</p>
-            <p class="mb-3"><strong>Data de Lançamento:</strong> @Model.Atual.AnoLancamento.ToString("dd/MM/yyyy")</p>
-            <p class="fw-bold">Gêneros</p>
+         <p class="mb-3"><strong>Descrição:</strong> @Model.Atual.Descricao</p>
+
+<p class="mb-3"><strong>Gênero(s):</strong> 
+    @foreach (var jogoGenero in Model.Atual.JogoGeneros)
+    {
+        <span>@jogoGenero.Genero.NomeGenero</span>@(jogoGenero != Model.Atual.JogoGeneros.Last() ? ", " : "")
+    }
+</p>
+
+<p class="mb-3"><strong>Desenvolvedor(es):</strong> 
+    @foreach (var jogoDesenvolvedor in Model.Atual.JogoDesenvolvedores)
+    {
+        <span>@jogoDesenvolvedor.Desenvolvedor.NomeDesenvolvedor</span>@(jogoDesenvolvedor != Model.Atual.JogoDesenvolvedores.Last() ? ", " : "")
+    }
+</p>
+
+<p class="mb-3"><strong>Data de Lançamento:</strong> @Model.Atual.AnoLancamento</p>
+
             <div class="d-flex gap-2 my-2">
-                @foreach (var Genero in Model.Atual.Genero.NomeGenero)
+                @foreach (var genero in Model.Atual.JogoGeneros)
                 {
                     <a href="#" class="btn btn-lg text-white" style="background-color:Green"></a>
                 }
             </div>
         </div>
     </div>
-</div> *@
+</div>
