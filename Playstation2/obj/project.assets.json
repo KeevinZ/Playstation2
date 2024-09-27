@@ -894,26 +894,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\etec\\.nuget\\packages\\": {}
+    "C:\\Users\\Computador\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj",
+      "projectUniqueName": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj",
       "projectName": "Playstation2",
-      "projectPath": "C:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj",
-      "packagesPath": "C:\\Users\\etec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\etec\\Desktop\\Playstation2\\Playstation2\\obj\\",
+      "projectPath": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\Playstation2.csproj",
+      "packagesPath": "C:\\Users\\Computador\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\etec\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Computador\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -926,6 +924,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -964,7 +967,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

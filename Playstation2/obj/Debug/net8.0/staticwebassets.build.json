@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EoYP1yGQfDm2vswQS8HktYe4owMUfyd0qKcuhibscAg=",
+  "Hash": "FTPhRV/iw8Lhlx86KT+2m52tvc4DZ70t+qu2AfojnDw=",
   "Source": "Playstation2",
   "BasePath": "_content/Playstation2",
   "Mode": "Default",
@@ -245,12 +245,12 @@
       "OriginalItemSpec": "wwwroot\\Img\\Jogos\\10.png"
     },
     {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\11.jpg",
+      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\11.png",
       "SourceId": "Playstation2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
       "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/11.jpg",
+      "RelativePath": "Img/Jogos/11.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -261,7 +261,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\11.jpg"
+      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\11.png"
     },
     {
       "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\12.png",
@@ -378,12 +378,12 @@
       "OriginalItemSpec": "wwwroot\\Img\\Jogos\\17.png"
     },
     {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\18.jpg",
+      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\2.png",
       "SourceId": "Playstation2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
       "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/18.jpg",
+      "RelativePath": "Img/Jogos/2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -394,15 +394,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\18.jpg"
+      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\2.png"
     },
     {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\19.jpg",
+      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\3.png",
       "SourceId": "Playstation2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
       "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/19.jpg",
+      "RelativePath": "Img/Jogos/3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -413,83 +413,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\19.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\2.jpg",
-      "SourceId": "Playstation2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
-      "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/2.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\2.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\20.jpg",
-      "SourceId": "Playstation2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
-      "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/20.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\20.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\21.png",
-      "SourceId": "Playstation2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
-      "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/21.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\21.png"
-    },
-    {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\3.jpg",
-      "SourceId": "Playstation2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
-      "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/3.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\3.jpg"
+      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\3.png"
     },
     {
       "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\4.png",
@@ -511,12 +435,12 @@
       "OriginalItemSpec": "wwwroot\\Img\\Jogos\\4.png"
     },
     {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\5.jpg",
+      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\5.png",
       "SourceId": "Playstation2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
       "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/5.jpg",
+      "RelativePath": "Img/Jogos/5.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -527,15 +451,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\5.jpg"
+      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\5.png"
     },
     {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\6.jpg",
+      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\6.png",
       "SourceId": "Playstation2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
       "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/6.jpg",
+      "RelativePath": "Img/Jogos/6.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -546,7 +470,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\6.jpg"
+      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\6.png"
     },
     {
       "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\7.png",
@@ -568,12 +492,12 @@
       "OriginalItemSpec": "wwwroot\\Img\\Jogos\\7.png"
     },
     {
-      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\8.jpg",
+      "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\8.png",
       "SourceId": "Playstation2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\",
       "BasePath": "_content/Playstation2",
-      "RelativePath": "Img/Jogos/8.jpg",
+      "RelativePath": "Img/Jogos/8.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -584,7 +508,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\8.jpg"
+      "OriginalItemSpec": "wwwroot\\Img\\Jogos\\8.png"
     },
     {
       "Identity": "C:\\Users\\Computador\\Desktop\\Playstation2\\Playstation2\\wwwroot\\Img\\Jogos\\9.png",
