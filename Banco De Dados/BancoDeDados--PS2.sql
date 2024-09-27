@@ -98,10 +98,7 @@ INSERT INTO Jogo (Titulo, AnoLancamento, Descricao, Imagem) VALUES
 ('Devil May Cry 3: Dante\'s Awakening', 2005, 'Um jogo de ação hack and slash onde o jogador controla Dante, um caçador de demônios, enfrentando hordas de inimigos e desafiando seu próprio irmão.', '\img\Jogos\15.png'),
 ('Prince of Persia: The Sands of Time', 2003, 'Um jogo de ação e plataforma onde o jogador controla o Príncipe, que deve usar habilidades de parkour e manipulação do tempo para salvar seu reino.', '\img\Jogos\16.png'),
 ('Silent Hill 2', 2001, 'Um jogo de terror psicológico em que o jogador assume o papel de James Sunderland, que procura sua esposa falecida em uma cidade estranha e aterrorizante.', '\img\Jogos\17.png'),
-('SSX Tricky', 2001, 'Um jogo de corrida de snowboard que oferece truques exagerados e acrobacias em pistas radicais, com uma jogabilidade arcade acelerada.', '\img\Jogos\18.png'),
-('SoulCalibur II', 2003, 'Um jogo de luta em 3D centrado em combates com armas, oferecendo uma variedade de personagens com estilos únicos e uma narrativa envolvente.', '\img\Jogos\19.png'),
-('Mortal Kombat: Shaolin Monks', 2005, 'Um jogo de ação e aventura em que os jogadores assumem o controle de Liu Kang e Kung Lao enquanto enfrentam hordas de inimigos no universo Mortal Kombat.', '\img\Jogos\20.png'),
-('PES 2013', 2012, 'Um simulador de futebol que oferece uma jogabilidade realista, com controles precisos e mecânicas de jogo detalhadas para uma experiência imersiva.', '\img\Jogos\21.png');
+
 
 -- Relacionamento entre jogos e gêneros atualizado
 INSERT INTO JogoGenero (JogoID, GeneroID) VALUES 
@@ -122,10 +119,7 @@ INSERT INTO JogoGenero (JogoID, GeneroID) VALUES
 (15, 1),         -- Devil May Cry 3: Dante's Awakening
 (16, 2),         -- Prince of Persia: The Sands of Time
 (17, 2),         -- Silent Hill 2
-(18, 7),         -- SSX Tricky
-(19, 8),         -- SoulCalibur II
-(20, 8),         -- Mortal Kombat: Shaolin Monks
-(21, 7);         -- PES 2013
+
 
 -- Relacionamento entre jogos e desenvolvedores atualizado
 INSERT INTO JogoDesenvolvedor (JogoID, DesenvolvedorID) VALUES 
@@ -146,8 +140,4 @@ INSERT INTO JogoDesenvolvedor (JogoID, DesenvolvedorID) VALUES
 (15, 6),           -- Devil May Cry 3: Capcom
 (16, 14),          -- Prince of Persia: The Sands of Time: Ubisoft
 (17, 2),           -- Silent Hill 2: Konami
-(18, 13),          -- SSX Tricky: Electronic Arts
-(19, 9),           -- SoulCalibur II: Namco
-(20, 8),           -- Mortal Kombat: Shaolin Monks
-(21, 10);          -- PES 2013: EA Sports
 

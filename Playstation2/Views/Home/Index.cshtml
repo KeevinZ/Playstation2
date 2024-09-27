@@ -1,4 +1,4 @@
-﻿﻿@model Playstation2.ViewModels.HomeVM
+﻿﻿@* @model Playstation2.ViewModels.HomeVM
 @{
     ViewData["Title"] = "Home";
     string BackgroundColor(string cor)
@@ -16,7 +16,7 @@
                     Todos
                 </button>
                 
-                @foreach (Genero genero in Model.Generos)
+                @foreach (var genero in Model.Generos)
                 {
                     <button id="btn-@genero.NomeGenero" class="btn btn-sm my-2 text-white btn-filter"
                         style="background-color:@genero.Cor">
@@ -30,7 +30,7 @@
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
 
-  @foreach (Jogo jogo in Model.Jogos)
+  @foreach (var jogo in Model.Jogos)
     {
         <div class="col @string.Join(' ', jogo.JogoGeneros.Select(jg => jg.Genero.NomeGenero))">
             <a asp-action="Details" asp-route-id="@jogo.JogoID" class="text-decoration-none">
@@ -41,25 +41,22 @@
                         <h3 class="card-title text-dark">@jogo.Titulo</h3>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex gap-2 my-2">
-                                @foreach (JogoGenero genero in jogo.JogoGeneros)
+                                @foreach (var genero in jogo.JogoGeneros)
                                 {
                                     <a href="#" class="btn text-white"
                                        style="background-color:@genero.Genero.Cor">@genero.Genero.NomeGenero</a>
-                               }
-                                </div>
+                                }
                             </div>
                         </div>
                     </div>
-                </a>
-            </div>
-            <!-- Card Pokemon - Fim -->
-        }
-
-        <div id="zeroJogo" class="col-lg-12 text-center" hidden>
-            <h1 class="my-3 text-danger">Nenhum Jogo Encontrado</h1>
+                </div>
+            </a>
         </div>
+    }
+
+    <div id="zeroJogo" class="col-lg-12 text-center" hidden>
+        <h1 class="my-3 text-danger">Nenhum Jogo Encontrado</h1>
+    </div>
     </div>
 
-</div>
-
-</div>
+</div> *@
