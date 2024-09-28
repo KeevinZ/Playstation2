@@ -49,10 +49,11 @@
 <p class="mb-3"><strong>Data de Lançamento:</strong> @Model.Atual.AnoLancamento</p>
 
             <div class="d-flex gap-2 my-2">
-                @foreach (var genero in Model.Atual.JogoGeneros)
-                {
-                    <a href="#" class="btn btn-lg text-white" style="background-color:Green"></a>
-                }
+               @foreach (var genero in Model.Atual.JogoGeneros)
+            {
+                <a href="#" class="btn btn-lg text-white" 
+                 style="background-color:@genero.Genero.Cor">@genero.Genero.NomeGenero</a>
+            }
             </div>
         </div>
     </div>

@@ -81,7 +81,7 @@ INSERT INTO Desenvolvedor (NomeDesenvolvedor) VALUES
 
 -- Inserção de jogos atualizada
 INSERT INTO Jogo (Titulo, AnoLancamento, Descricao, Imagem) VALUES 
-('Grand Theft Auto: San Andreas', 2004, 'Um jogo de ação e aventura de mundo aberto que permite ao jogador explorar uma vasta cidade fictícia, realizando missões e interagindo com personagens em um ambiente dinâmico.', '\img\Jogos\1.png'),
+('Grand Theft Auto: San Andreas', 2004, 'Um jogo de ação e aventura de mundo aberto que permite ao jogador explorar uma vasta cidade fictícia, realizando missões e interagindo com personagens em um ambiente dinâmico.', '\\img\\Jogos\\1.png'),
 ('Metal Gear Solid 3: Snake Eater', 2004, 'Um jogo de espionagem tática onde o jogador assume o papel de Snake, um espião infiltrado em uma selva soviética para parar uma ameaça nuclear.', '\img\Jogos\2.png'),
 ('Final Fantasy X', 2001, 'Um RPG que segue a jornada de Tidus e Yuna em um mundo devastado por uma criatura chamada Sin, com uma história envolvente e um sistema de batalha baseado em turnos.', '\img\Jogos\3.png'),
 ('Gran Turismo 4', 2004, 'Um simulador de corrida que oferece uma vasta gama de veículos e pistas, com gráficos realistas e uma física de direção precisa.', '\img\Jogos\4.png'),
@@ -95,7 +95,7 @@ INSERT INTO Jogo (Titulo, AnoLancamento, Descricao, Imagem) VALUES
 ('Tekken 5', 2005, 'Um jogo de luta em 3D com uma variedade de personagens e estilos de luta, oferecendo tanto modos de história quanto de combate versus.', '\img\Jogos\12.png'),
 ('Burnout 3: Takedown', 2004, 'Um jogo de corrida arcade onde o objetivo é destruir os carros dos oponentes e causar o maior dano possível em acidentes espetaculares.', '\img\Jogos\13.png'),
 ('Okami', 2006, 'Um jogo de ação e aventura inspirado na mitologia japonesa, onde o jogador controla uma deusa lobo chamada Amaterasu em uma missão para salvar o mundo das trevas.', '\img\Jogos\14.png'),
-('Devil May Cry 3: Dante\'s Awakening', 2005, 'Um jogo de ação hack and slash onde o jogador controla Dante, um caçador de demônios, enfrentando hordas de inimigos e desafiando seu próprio irmão.', '\img\Jogos\15.png'),
+('Devil May Cry 3: Dante\s Awakening', 2005, 'Um jogo de ação hack and slash onde o jogador controla Dante, um caçador de demônios, enfrentando hordas de inimigos e desafiando seu próprio irmão.', '\img\Jogos\15.png'),
 ('Prince of Persia: The Sands of Time', 2003, 'Um jogo de ação e plataforma onde o jogador controla o Príncipe, que deve usar habilidades de parkour e manipulação do tempo para salvar seu reino.', '\img\Jogos\16.png'),
 ('Silent Hill 2', 2001, 'Um jogo de terror psicológico em que o jogador assume o papel de James Sunderland, que procura sua esposa falecida em uma cidade estranha e aterrorizante.', '\img\Jogos\17.png'),
 
