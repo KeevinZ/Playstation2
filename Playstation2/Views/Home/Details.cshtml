@@ -1,6 +1,6 @@
 @model Playstation2.ViewModels.DetailsVM
 @{
-    ViewData["Title"] = "Detalhes do Jogo";
+    ViewData["Title"] = "Jogo";
 }
 
 <div class="container text-white">
@@ -8,53 +8,69 @@
         <div class="col text-center">
             @if (Model.Anterior != null)
             {
-                <a asp-action="Details" asp-route-id="@Model.Anterior.JogoID" class="btn btn-lg btn-outline-danger text-white">
-                    @Model.Anterior.Titulo
+                <a asp-action="Details" asp-route-id="@Model.Anterior.JogoID"
+                    class="btn btn-lg btn-outline-danger text-white">
+                    @Model.Anterior.JogoID.ToString("000") - @Model.Anterior.Titulo
                 </a>
             }
         </div>
-            <h1 class="fs-1">@Model.Atual.Titulo</h1>
+
+        <div class="col text-center">
+            <h1 class="fs-1">
+                @if (Model.Atual != null)
+                {
+                    @Model.Atual.Titulo
+                    <span class="fs-2 text-secondary">Nº
+                        @Model.Atual.JogoID.ToString("000")
+                    </span>
+                }
+                else
+                {
+                    <span class="text-danger">Jogo atual não encontrado</span>
+                }
+            </h1>
         </div>
+
         <div class="col text-center">
             @if (Model.Proximo != null)
             {
-                <a asp-action="Details" asp-route-id="@Model.Proximo.JogoID" class="btn btn-lg btn-outline-danger text-white">
-                    @Model.Proximo.Titulo
+                <a asp-action="Details" asp-route-id="@Model.Proximo.JogoID"
+                    class="btn btn-lg btn-outline-danger text-white">
+                    @Model.Proximo.JogoID.ToString("000") - @Model.Proximo.Titulo
                 </a>
             }
         </div>
     </div>
 
-    <div class="row mt-5">
-        <div class="col-lg-5 p-0">
-            <img class="img-fluid cursor-pointer" src="@Model.Atual.Imagem" alt="@Model.Atual.Titulo">
-        </div>
-        <div class="col-lg-7 fs-5 mt-4">
-         <p class="mb-3"><strong>Descrição:</strong> @Model.Atual.Descricao</p>
-
-<p class="mb-3"><strong>Gênero(s):</strong> 
-    @foreach (var jogoGenero in Model.Atual.JogoGeneros)
+    @if (Model.Atual != null)
     {
-        <span>@jogoGenero.Genero.NomeGenero</span>@(jogoGenero != Model.Atual.JogoGeneros.Last() ? ", " : "")
-    }
-</p>
+        <div class="row mt-5">
+            <div class="col-lg-5 p-0">
+                <img class="img-fluid cursor-pointer" src="@Model.Atual.Imagem" alt="@Model.Atual.Titulo">
+            </div>
+            <div class="col-lg-7 fs-5 mt-4">
+                <p class="mb-3"><strong>Descrição:</strong> @Model.Atual.Descricao</p>
+                <p class="mb-3"><strong>Ano de lançamento:</strong> @Model.Atual.AnoLancamento</p>
+                <p class="mb-3"><strong>Plataforma:</strong> @Model.Atual.Plataforma</p>
 
-<p class="mb-3"><strong>Desenvolvedor(es):</strong> 
-    @foreach (var jogoDesenvolvedor in Model.Atual.JogoDesenvolvedores)
-    {
-        <span>@jogoDesenvolvedor.Desenvolvedor.NomeDesenvolvedor</span>@(jogoDesenvolvedor != Model.Atual.JogoDesenvolvedores.Last() ? ", " : "")
-    }
-</p>
-
-<p class="mb-3"><strong>Data de Lançamento:</strong> @Model.Atual.AnoLancamento</p>
-
-            <div class="d-flex gap-2 my-2">
-               @foreach (var genero in Model.Atual.JogoGeneros)
-            {
-                <a href="#" class="btn btn-lg text-white" 
-                 style="background-color:@genero.Genero.Cor">@genero.Genero.NomeGenero</a>
-            }
+                @if (Model.Atual.JogoGeneros != null && Model.Atual.JogoGeneros.Any())
+                {
+                    <p class="fw-bold">Gênero:</p>
+                    <div class="d-flex gap-2 my-2">
+                        @foreach (var jogoGenero in Model.Atual.JogoGeneros)
+                        {
+                            <a href="#" class="btn btn-lg text-white"
+                                style="background-color:@jogoGenero.Genero.Cor">
+                                @jogoGenero.Genero.NomeGenero
+                            </a>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted">Nenhum gênero associado.</p>
+                }
             </div>
         </div>
-    </div>
-</div>
+    }
+}
