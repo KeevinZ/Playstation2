@@ -34,7 +34,7 @@
 			var corDoGenero = jogo.JogoGeneros.Select(jg => jg.Genero.Cor).FirstOrDefault();
 			
 			<div class="col poke @string.Join(' ', jogo.JogoGeneros.Select(jg => jg.Genero.NomeGenero))">
-				<a asp-action="Details" asp-route-id="@jogo.AnoLancamento" class="text-decoration-none">
+				<a asp-action="Details" asp-route-id="@jogo.JogoID" class="text-decoration-none">
 					<div class="card" style="backgroundColor: @BackgroundColor(@corDoGenero)">
 						<img src="@jogo.Imagem" class="card-img-top" alt="@jogo.Titulo" />
 						<div class="card-body">

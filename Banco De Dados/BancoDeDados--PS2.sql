@@ -1,31 +1,26 @@
--- Criação do banco de dados
 CREATE DATABASE JogosPS2;
 USE JogosPS2;
 
--- Tabela Jogo
 CREATE TABLE Jogo (
     JogoID INT PRIMARY KEY AUTO_INCREMENT,
     Titulo VARCHAR(255) NOT NULL,
-    AnoLancamento INT NOT NULL CHECK (AnoLancamento >= 2000 AND AnoLancamento <= YEAR(CURDATE())),
+    AnoLancamento INT NOT NULL,
     Plataforma VARCHAR(50) NOT NULL DEFAULT 'PlayStation 2',
     Descricao VARCHAR(1000) NOT NULL,
     Imagem VARCHAR(200)
 );
 
--- Tabela Genero
 CREATE TABLE Genero (
     GeneroID INT PRIMARY KEY AUTO_INCREMENT,
     NomeGenero VARCHAR(100) NOT NULL,
     Cor VARCHAR(30)
 );
 
--- Tabela Desenvolvedor
 CREATE TABLE Desenvolvedor (
     DesenvolvedorID INT PRIMARY KEY AUTO_INCREMENT,
     NomeDesenvolvedor VARCHAR(255) NOT NULL
 );
 
--- Tabela para relação muitos-para-muitos entre Jogo e Genero
 CREATE TABLE JogoGenero (
     JogoID INT,
     GeneroID INT,
@@ -34,7 +29,6 @@ CREATE TABLE JogoGenero (
     FOREIGN KEY (GeneroID) REFERENCES Genero(GeneroID)
 );
 
--- Tabela para relação muitos-para-muitos entre Jogo e Desenvolvedor
 CREATE TABLE JogoDesenvolvedor (
     JogoID INT,
     DesenvolvedorID INT,
@@ -43,7 +37,6 @@ CREATE TABLE JogoDesenvolvedor (
     FOREIGN KEY (DesenvolvedorID) REFERENCES Desenvolvedor(DesenvolvedorID)
 );
 
--- Inserções na tabela Genero
 INSERT INTO Genero (NomeGenero, Cor) VALUES 
 ('Ação', 'rgba(170, 170, 187, 1)'),
 ('Aventura', 'rgba(51, 153, 255, 1)'),
@@ -56,7 +49,6 @@ INSERT INTO Genero (NomeGenero, Cor) VALUES
 ('Vários', 'rgba(170, 187, 34, 1)'),
 ('Simulação', 'rgba(221, 187, 85, 1)');
 
--- Inserções na tabela Desenvolvedor
 INSERT INTO Desenvolvedor (NomeDesenvolvedor) VALUES 
 ('Rockstar North'), 
 ('Konami'), 
@@ -77,7 +69,6 @@ INSERT INTO Desenvolvedor (NomeDesenvolvedor) VALUES
 ('Santa Monica Studios'), 
 ('Radical Entertainment');
 
--- Inserções na tabela Jogo (com apóstrofos escapados)
 INSERT INTO Jogo (Titulo, AnoLancamento, Descricao, Imagem) VALUES 
 ('Grand Theft Auto: San Andreas', 2004, 'Um jogo de ação e aventura de mundo aberto que permite ao jogador explorar uma vasta cidade fictícia, realizando missões e interagindo com personagens em um ambiente dinâmico.', '/img/Jogos/1.png'),
 ('Metal Gear Solid 3: Snake Eater', 2004, 'Um jogo de espionagem tática onde o jogador assume o papel de Snake, um espião infiltrado em uma selva soviética para parar uma ameaça nuclear.', '/img/Jogos/2.png'),
@@ -93,33 +84,31 @@ INSERT INTO Jogo (Titulo, AnoLancamento, Descricao, Imagem) VALUES
 ('Tekken 5', 2005, 'Um jogo de luta em 3D com uma variedade de personagens e estilos de luta, oferecendo tanto modos de história quanto de combate versus.', '/img/Jogos/12.png'),
 ('Burnout 3: Takedown', 2004, 'Um jogo de corrida arcade onde o objetivo é destruir os carros dos oponentes e causar o maior dano possível em acidentes espetaculares.', '/img/Jogos/13.png'),
 ('Okami', 2006, 'Um jogo de ação e aventura inspirado na mitologia japonesa, onde o jogador controla uma deusa lobo chamada Amaterasu em uma missão para salvar o mundo das trevas.', '/img/Jogos/14.png'),
-('Devil May Cry 3: Dante''s Awakening', 2005, 'Um jogo de ação hack and slash onde o jogador controla Dante, um caçador de demônios, enfrentando hordas de inimigos e desafiando seu próprio irmão.', '/img/Jogos/15.png'),
+('Devil May Cry 3: Dantes Awakening', 2005, 'Um jogo de ação hack and slash onde o jogador controla Dante, um caçador de demônios, enfrentando hordas de inimigos e desafiando seu próprio irmão.', '/img/Jogos/15.png'),
 ('Prince of Persia: The Sands of Time', 2003, 'Um jogo de ação e plataforma onde o jogador controla o Príncipe, que deve usar habilidades de parkour e manipulação do tempo para salvar seu reino.', '/img/Jogos/16.png'),
 ('Silent Hill 2', 2001, 'Um jogo de terror psicológico em que o jogador assume o papel de James Sunderland, que procura sua esposa falecida em uma cidade estranha e aterrorizante.', '/img/Jogos/17.png');
 
--- Relacionamentos JogoGenero
 INSERT INTO JogoGenero (JogoID, GeneroID) VALUES 
-(1, 1), (1, 2),  -- GTA San Andreas
-(2, 2),          -- Metal Gear Solid 3: Snake Eater
-(3, 3),          -- Final Fantasy X
-(4, 6),          -- Gran Turismo 4
-(5, 1), (5, 2),  -- Shadow of the Colossus
-(6, 1), (6, 2),  -- Resident Evil 4
-(7, 1),          -- God of War II
-(8, 1), (8, 4),  -- Crash of Titans
-(9, 2),          -- Jak and Daxter: The Precursor Legacy
-(10, 3),         -- Kingdom Hearts II
-(12, 8),         -- Tekken 5
-(11, 9),         -- Super Coleção 7.784 Jogos
-(13, 6),         -- Burnout 3: Takedown
-(14, 2),         -- Okami
-(15, 1),         -- Devil May Cry 3: Dante's Awakening
-(16, 2),         -- Prince of Persia: The Sands of Time
-(17, 2);         -- Silent Hill 2
+(1, 1), (1, 2),  
+(2, 2),          
+(3, 3),          
+(4, 6),          
+(5, 1), (5, 2),  
+(6, 1), (6, 2),  
+(7, 1),          
+(8, 1), (8, 4),  
+(9, 2),          
+(10, 3),         
+(12, 8),         
+(11, 9),         
+(13, 6),         
+(14, 2),         
+(15, 1),         
+(16, 2),         
+(17, 2);         
 
--- Relacionamentos JogoDesenvolvedor
 INSERT INTO JogoDesenvolvedor (JogoID, DesenvolvedorID) VALUES 
-(1, 1), (1, 11),   -- GTA San Andreas
-(2, 2),            -- Metal Gear Solid 3: Snake Eater
-(3, 3),            -- Final Fantasy X
-(4, 4),
+(1, 1), (1, 11),   
+(2, 2),            
+(3, 3),            
+(4, 4);

@@ -20,7 +20,6 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        // Preenche o ViewModel com dados dos Gêneros e Jogos
         HomeVM home = new()
         {
             Generos = _context.Genero.ToList(),
@@ -38,10 +37,10 @@ public class HomeController : Controller
         // Busca o jogo pelos relacionamentos e detalhes
        Jogo jogo = _context.Jogo
     .Where(j => j.JogoID == id)
-    .Include(j => j.JogoGeneros)                // Inclui a relação JogoGenero
-        .ThenInclude(jg => jg.Genero)           // Inclui os gêneros via JogoGenero
-    .Include(j => j.JogoDesenvolvedores)        // Inclui a relação JogoDesenvolvedor
-        .ThenInclude(jd => jd.Desenvolvedor)    // Inclui os desenvolvedores via JogoDesenvolvedor
+    .Include(j => j.JogoGeneros)                
+        .ThenInclude(jg => jg.Genero)           
+    .Include(j => j.JogoDesenvolvedores)        
+        .ThenInclude(jd => jd.Desenvolvedor)   
     .SingleOrDefault();
 
 
