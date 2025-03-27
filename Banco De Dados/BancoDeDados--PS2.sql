@@ -1,9 +1,8 @@
 
--- Criando o banco de dados
 CREATE DATABASE JogosPS2;
 USE JogosPS2;
 
--- Tabela de jogos
+
 CREATE TABLE Jogo (
     JogoID INT PRIMARY KEY AUTO_INCREMENT,
     Titulo VARCHAR(255) NOT NULL,
@@ -13,20 +12,20 @@ CREATE TABLE Jogo (
     Imagem varchar(200)
 );
 
--- Tabela de gêneros
+
 CREATE TABLE Genero (
     GeneroID INT PRIMARY KEY AUTO_INCREMENT,
     NomeGenero VARCHAR(100) NOT NULL,
     Cor varchar(30)
 );
 
--- Tabela de desenvolvedores (inclui também publicadores)
+
 CREATE TABLE Desenvolvedor (
     DesenvolvedorID INT PRIMARY KEY AUTO_INCREMENT,
     NomeDesenvolvedor VARCHAR(255) NOT NULL
 );
 
--- Tabela de relação entre jogos e gêneros
+
 CREATE TABLE JogoGenero (
     JogoID INT,
     GeneroID INT,
@@ -35,7 +34,7 @@ CREATE TABLE JogoGenero (
     FOREIGN KEY (GeneroID) REFERENCES Genero(GeneroID)
 );
 
--- Tabela de relação entre jogos e desenvolvedores/publicadores
+
 CREATE TABLE JogoDesenvolvedor (
     JogoID INT,
     DesenvolvedorID INT,
@@ -57,7 +56,7 @@ INSERT INTO Genero (NomeGenero, Cor) VALUES
 ('Vários','rgba(170, 187, 34, 1)'),
 ('Simulação','rgba(221, 187, 85, 1)');
 
--- Inserção de desenvolvedores
+
 INSERT INTO Desenvolvedor (NomeDesenvolvedor) VALUES 
 ('Rockstar North'),  -- 1
 ('Konami'),  -- 2
@@ -79,7 +78,7 @@ INSERT INTO Desenvolvedor (NomeDesenvolvedor) VALUES
 ('Radical Entertainment'); -- 18
 
 
--- Inserção de jogos atualizada
+
 INSERT INTO Jogo (Titulo, AnoLancamento, Descricao, Imagem) VALUES 
 ('Grand Theft Auto: San Andreas', 2004, 'Um jogo de ação e aventura de mundo aberto que permite ao jogador explorar uma vasta cidade fictícia, realizando missões e interagindo com personagens em um ambiente dinâmico.', '\\img\\Jogos\\1.png'),
 ('Metal Gear Solid 3: Snake Eater', 2004, 'Um jogo de espionagem tática onde o jogador assume o papel de Snake, um espião infiltrado em uma selva soviética para parar uma ameaça nuclear.', '\img\Jogos\2.png'),
@@ -100,7 +99,7 @@ INSERT INTO Jogo (Titulo, AnoLancamento, Descricao, Imagem) VALUES
 ('Silent Hill 2', 2001, 'Um jogo de terror psicológico em que o jogador assume o papel de James Sunderland, que procura sua esposa falecida em uma cidade estranha e aterrorizante.', '\img\Jogos\17.png'),
 
 
--- Relacionamento entre jogos e gêneros atualizado
+
 INSERT INTO JogoGenero (JogoID, GeneroID) VALUES 
 (1, 1), (1, 2),  -- GTA San Andreas
 (2, 2),          -- Metal Gear Solid 3: Snake Eater
@@ -121,7 +120,7 @@ INSERT INTO JogoGenero (JogoID, GeneroID) VALUES
 (17, 2),         -- Silent Hill 2
 
 
--- Relacionamento entre jogos e desenvolvedores atualizado
+
 INSERT INTO JogoDesenvolvedor (JogoID, DesenvolvedorID) VALUES 
 (1, 1), (1, 11),   -- GTA San Andreas: Rockstar North e Rockstar Games
 (2, 2),            -- Metal Gear Solid 3: Snake Eater: Konami
@@ -140,4 +139,3 @@ INSERT INTO JogoDesenvolvedor (JogoID, DesenvolvedorID) VALUES
 (15, 6),           -- Devil May Cry 3: Capcom
 (16, 14),          -- Prince of Persia: The Sands of Time: Ubisoft
 (17, 2),           -- Silent Hill 2: Konami
-

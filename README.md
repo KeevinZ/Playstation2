@@ -1,5 +1,38 @@
-# PROJETO FEITO PARA AULA DE PROGRAMAÇÃO WEB II.
+# 🎮 Catálogo de Jogos de PlayStation 2
 
-# SITE CRIADO PARA MOSTRAR ALGUNS JOGOS DO PLAYSTATION 2 E SUAS INFORMAÇÕES.
+Site para exibição de jogos de PlayStation 2 em formato de cards, mostrando **título**, **descrição** e **imagem** de cada jogo.
 
-Site tem como Pricipal linguagem o C# com conexão com o Banco de dados para a manipulação de conteudo na página 
+---
+
+## 🚀 Tecnologias Usadas
+
+- ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+- ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+---
+
+## 🌟 Preview
+
+
+
+---
+
+## ⚙️ Como Usar
+
+1. Clone o repositório.
+2. Configure o banco MySQL.
+3. Execute o projeto em um ambiente C#.
+4. Explore o catálogo de jogos pelo navegador.
+
+---
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Envie _issues_ ou _pull requests_.
+
+---
+
+## 📜 Licença
+
+Licença [SEU TIPO DE LICENÇA]. Consulte `LICENSE`.
+
