@@ -13,7 +13,8 @@ Site para exibição de jogos de PlayStation 2 em formato de cards, mostrando **
 
 ## 🌟 Preview
 
-
+<img src="Banco De Dados/PaginaInicial.png" alt="Inde" width="200">
+<img src="Banco De Dados/Card.png" alt="Details" width="200">
 
 ---
 
@@ -31,8 +32,4 @@ Site para exibição de jogos de PlayStation 2 em formato de cards, mostrando **
 Contribuições são bem-vindas! Envie _issues_ ou _pull requests_.
 
 ---
-
-## 📜 Licença
-
-Licença [SEU TIPO DE LICENÇA]. Consulte `LICENSE`.
 
